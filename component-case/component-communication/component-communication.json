@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "组件间通信与事件",
+    "usingComponents": {
+        "showbox": "../../common/component/showbox/index",
+        "box": "../../common/component/container/index",
+        "com1": "./components/comp1/comp1",
+        "com2": "./components/comp2/comp2"
+    }
+}
