@@ -23,9 +23,9 @@
         图片上传
     </view> -->
 
-    <view bindtap="getDatas">
+    <!-- <view bindtap="getDatas">
         发送请求
-    </view>
+    </view> -->
 
     <!-- <view bindtap="getDatas2">
         请求2

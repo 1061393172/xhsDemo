@@ -18,21 +18,10 @@ Page({
     code: ""
   },
   onLoad(e) {
-    console.log("=========================");
-    // xhs.login({
-    //   timeout: 10000,
-    //   success: (result) => {
-    //     console.log("code===>", result.code);
-    //     this.data.code = result.code
-    //   },
-    //   fail: (err) => {
-    //     console.log("err==>", err);
-    //   },
-    //   complete: () => {
-
-    //   }
-    // });
-
+    // 问题===========================
+    xhs.showLoading({title: '...'});
+    xhs.showToast({ title: 'Toast'});
+    
 
     // lottie页面需要判断版本
     const t = this;
@@ -78,12 +67,13 @@ Page({
         const tempFilePaths = result.tempFilePaths
         console.log(tempFilePaths);
         xhs.uploadFile({
-          url: 'https://webservice.azyex.com/aiex_transport_webservice/xcx/picUpload/uploadPic',
+          url: 'https://dev.azyex.com/api/xcx/picUpload/uploadPic',
+          // url: 'http://192.168.2.199:8080/user/upload',
           filePath: tempFilePaths[0],
           name: 'picfile',
           header: {
-            'content-type': 'multipart/form-data',
-            loginId: 1213
+            // 'content-type': 'multipart/form-data',
+            loginId: String(1213)
           },
           success(res){
             console.log("res=============>", res);
@@ -100,14 +90,14 @@ Page({
   },
   getDatas(){
     xhs.request({
-      url: 'https://webservice.azyex.com/aiex_transport_webservice/xcx/orderTransPay/getDeduction',
+      url: 'https://webservice.azyex.com/aiex_transport_webservice/xcx/custLogin/saveXcxLoginDetail',
       data: {},
       header: {
         'content-type':'application/json',
-        loginId: 1346,
+        loginid: 1346,
         languageversion: 'Chinese'
       },
-      method: 'GET',
+      method: 'POST',
       // dataType: 'json',
       // responseType: 'text',
       success: (result) => {

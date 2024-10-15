@@ -37,12 +37,12 @@
     "enableVDom": false
   },
   "compileType": "miniprogram",
-  "libVersion": "3.57.3",
+  "libVersion": "3.96.2",
   "projectname": "test",
   "debugOptions": {
     "hidedInDevtools": []
   },
-  "appid": "66b56c1cebafd70001d60edc",
+  "appid": "67064aedbf36c0000198eaf0",
   "scripts": {},
   "staticServerOptions": {
     "baseURL": "",
